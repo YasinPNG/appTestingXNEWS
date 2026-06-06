@@ -1,0 +1,44 @@
+:root{
+    --title-color: black;
+    --title-Principaltext: Helvetica;
+    --button-action: #5D71D3;
+    --H1-title: Helvetica Neue;
+    --background-image:url("FondoXnews.jpg");
+    --borderradius-gen:5px;
+
+}
+
+*{
+    background-image: var(--background-image);
+}
+
+h1{
+    font-family:var(--H1-title);
+    color:var(--title-color);
+}
+
+body{
+    font-family:var(var(--title-Principaltext));
+    background-image: var(--background-image);
+    border-radius: var(--borderradius-gen);
+
+}
+
+.button{
+    color:var(--button-action);
+}
+
+.navbar{
+    color: var(--button-action);
+}
+
+.contenedor-columnas {
+    display: flex; 
+    gap: 20px; 
+}
+
+.columna {
+    flex: 1; 
+    background-color: #f0f0f0;
+    padding: 20px;
+}
