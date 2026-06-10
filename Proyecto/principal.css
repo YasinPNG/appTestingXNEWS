@@ -1,8 +1,8 @@
 :root{
     --title-color: black;
-    --principal-text:Arial;
+    --principal-text:"Helvetica", sans-serif;
     --button-action: #5D71D3;
-    --H1-title: Helvetica;
+    --H1-title: "Lucid Console", monospace;
     --background-image:url("FondoXnews.jpg");
     --borderradius-gen:5px;
 }
@@ -21,6 +21,10 @@ body{
     background-image: var(--background-image);
     border-radius: var(--borderradius-gen);
 
+}
+
+p{
+    font-family:var(--Paragraph-text);
 }
 
 .button{
