@@ -1,49 +1,34 @@
-body {
-    font-family: var(--principal-text);
-    background-image: var(--background-image);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin: 0;
-    height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.phone-frame {
-    width: 375px;
-    height: 667px;
-    box-shadow: 0px 0px 25px rgba(0,0,0,0.6);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px 0;
+.container{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  height: 100%;   
 }
 
 .logo {
-    text-align: center;
-    margin-bottom: 20px;
-}
+  margin-bottom: 10px;
+  text-align: center;  
+}                
 
 .logo img {
-    max-width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width: 150px;                        
+  display: block;
+  margin: 0 auto;                      
 }
 
 .recover-container {
-    background: rgba(255,255,255,0.9);
-    padding: 30px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
-    width: 90%;
-    max-width: 350px;
-    text-align: center;
-    border-radius: 15px;
+  background: var(--background-login);
+  padding: 20px;
+  box-shadow: 0px 6px 25px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: var(--borderradius-gen);               
 }
 
 .recover-container label {
@@ -53,16 +38,17 @@ body {
 }
 
 .recover-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: var(--borderradius-gen);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .recover-container button {
     width: 100%;
+    margin-top: 10px;
     padding: 12px;
     background: var(--button-action);
     border: none;
