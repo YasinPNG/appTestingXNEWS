@@ -31,6 +31,20 @@
                     </form>
                 </div>
             </div>
-        </div>  
+        </div> 
+        
+            <script>
+                const form = document.querySelector("form");
+
+                form.addEventListener("submit", function(event) {
+                    const pass1 = document.getElementById("password").value;
+                    const pass2 = document.getElementById("password2").value;
+
+                    if (pass1 !== pass2) {
+                        event.preventDefault(); 
+                        alert("Las contraseñas no coinciden. Inténtalo de nuevo.");
+                    }
+                });
+            </script>
     </body>
 </html>

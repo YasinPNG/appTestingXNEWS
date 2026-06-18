@@ -34,16 +34,17 @@
                 <main class="feed">
                     <article class="post">
                         <div class="post-image">
-                            <img src="IMG/Mario_Kart_World.webp" alt="Mario Kart 8 Deluxe">
+                            <img src="IMG/StarFox.webp" alt="Mario Kart 8 Deluxe">
                         </div>
                         <div class="post-content">
                             <div class="user-info">
-                                <span class="username">@TurboToad</span>
+                                <span class="username">@CptnFalco</span>
                             </div>
+                            <h3 class="post-text">¿Alguien esta tan emocionado como yo por el nuevo Star Fox?</h3>
                             <p class="post-text">
-                                ¿Soy yo o los objetos están demasiado desbalanceados?<br>
-                                Desde que salió el juego siento que los objetos están demasiado agresivos.  
-                                ¿A alguien más le pasa lo mismo?
+                                Desde la Wii U no tenemos un nuevo Star Fox y ahora al fin tenemos algo nuevo.
+                                Aunque sea un Remake, es mejor que no tener nada. Luego de la Pelicula de SuperMario
+                                estoy aun mas emocionado por ver mas de ellos.
                             </p>
                         </div>
                     </article>
@@ -55,8 +56,8 @@
                             <div class="user-info">
                                 <span class="username">@TurboToad</span>
                             </div>
+                            <h3 class="post-text">¿Soy yo o los objetos están demasiado desbalanceados?</h3>
                             <p class="post-text">
-                                ¿Soy yo o los objetos están demasiado desbalanceados?<br>
                                 Desde que salió el juego siento que los objetos están demasiado agresivos.  
                                 ¿A alguien más le pasa lo mismo?
                             </p>
@@ -71,8 +72,8 @@
                             <div class="user-info">
                                 <span class="username">@TurboToad</span>
                             </div>
+                            <h3 class="post-text">¿Soy yo o los objetos están demasiado desbalanceados?</h3>
                             <p class="post-text">
-                                ¿Soy yo o los objetos están demasiado desbalanceados?<br>
                                 Desde que salió el juego siento que los objetos están demasiado agresivos.  
                                 ¿A alguien más le pasa lo mismo?
                             </p>
@@ -88,6 +89,19 @@
                 </nav>
             </div>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const textos = document.querySelectorAll(".post-text");
+
+                textos.forEach(p => {
+                    const maxChars = 80; 
+                    if (p.textContent.length > maxChars) {
+                        p.textContent = p.textContent.substring(0, maxChars) + "...";
+                    }
+                });
+            });
+        </script>
     </body>
 
 </html>
