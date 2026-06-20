@@ -90,7 +90,6 @@
     margin-left: 0.75em;
 }
 
-/* Botón de Google */
 .google-btn {
     width: 100%;
     padding: 12px;
@@ -109,3 +108,9 @@
     margin-right: 10px;
 }
 
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none; 
+}

@@ -20,11 +20,43 @@
                 <form action="XNCodigo.html" method="post">
                     <label for="correo">Correo de recuperación</label>
                     <input type="email" id="correo" placeholder="Ingresa tu correo" required>
-
-                    <button type="submit">ENVIAR</button>
+                    <small id="errorMSG" class="error-msg"></small>
+                    <button type="submit" id="enviar-btn" >ENVIAR</button>
                 </form>
             </div>
         </div>
     </div>   
+
+       <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const enviarBtn = document.getElementById("enviar-btn");
+            const correo = document.getElementById("correo");
+            const MSGError = document.getElementById("errorMSG");
+
+            function validarCorreo() {
+                let valido = true;
+
+                if (correo.value.trim() === "") {
+                    MSGError.textContent = "Debes ingresar tu correo.";
+                    MSGError.style.display = "block";
+                    valido = false;
+                } else if (!correo.checkValidity()) {
+                    MSGError.textContent = "Formato de correo inválido.";
+                    MSGError.style.display = "block";
+                    valido = false;
+                } else {
+                    MSGError.style.display = "none";
+                }
+
+                return valido;
+            }
+
+            enviarBtn.addEventListener("click", () => {
+                validarCorreo(); 
+            });
+        });
+        </script>
+
+
     </body>
 </html>
